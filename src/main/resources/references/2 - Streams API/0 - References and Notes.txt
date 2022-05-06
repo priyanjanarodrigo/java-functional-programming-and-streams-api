@@ -1,0 +1,2 @@
+Collectors examples:
+    https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/

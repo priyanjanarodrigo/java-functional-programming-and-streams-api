@@ -1,0 +1,42 @@
+Imperative Programming
+----------------------
+* Involves you as a developer for defining every single detail about the implementation. It minimizes the number of lines
+  of code and allows developers to write concise code.
+
+* Example : Consider following implementation
+
+        List<Person> people = List.of(
+                new Person("John", MALE),
+                new Person("Stephanie", FEMALE),
+                new Person("Roman", MALE),
+                new Person("Dwayne", MALE),
+                new Person("Alexa", FEMALE),
+                new Person("Naya", FEMALE),
+                new Person("Seth", MALE),
+                new Person("Ronda", FEMALE)
+        );
+
+* Imperative approach :
+
+        List<Person> females = new ArrayList<>();
+
+        for (Person person : people) {
+            if (FEMALE.equals(person.getGender())) {
+                females.add(person);
+            }
+        }
+
+        for (Person female : females) {
+            System.out.println(female);
+        }
+* Declarative approach : (2 ways have been defined here)
+
+        // Just printing out the filtered results.
+        people.stream()
+                .filter(person -> FEMALE.equals(person.getGender()))
+                .forEach(System.out::println);
+
+        // Collecting the filtered results to a list.
+        List<Person> femalesList = people.stream()
+                .filter(person -> FEMALE.equals(person.getGender()))
+                .collect(Collectors.toList());

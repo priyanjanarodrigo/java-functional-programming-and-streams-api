@@ -1,0 +1,27 @@
+* This package contains a bunch of functional interfaces
+
+* A functional interface is an interface which has a single abstract method. There can be multiple default methods and
+  static methods, but it must contain only one abstract method.
+
+* When we define a custom functional interfaces it is highly recommended annotating it with @FunctionalIterface
+  (not mandatory) which will help the compiler to ensure that any more abstract methods will not be allowed to be added
+  except the single abstract method.
+
+* Official Docs:
+    https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+* Functional interfaces provide target types for lambda expressions and method references. Each functional interface
+  has a single abstract method, called the functional method for that functional interface, to which the lambda
+  expression's parameter and return types are matched or adapted. Functional interfaces can provide a target type in
+  multiple contexts, such as assignment context, method invocation, or cast context:
+
+      // Assignment context
+      Predicate<String> p = String::isEmpty;
+
+      // Method invocation context
+      stream.filter(e -> e.getSize() > 10)...
+
+      // Cast context
+      stream.map((ToIntFunction) e -> e.getSize())...
+
+  Source (docs.Oracle.com, 2021)

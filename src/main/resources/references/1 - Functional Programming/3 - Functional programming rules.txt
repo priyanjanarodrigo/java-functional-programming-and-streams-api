@@ -1,0 +1,19 @@
+------------------------------------------------------------
+> Pure functional programming has a set of rules to follow :
+------------------------------------------------------------
+
+* No state
+    - No outside state is managed
+
+* Pure functions
+    - don't depend on any other/ global state
+    - Example : Modifying a counter (int counter) which is there outside the function
+
+* No side effect
+    - Should have no side effect other than everything Inside. no side effect to outside scope
+    - Example : Modifying a counter (int counter) which is there outside the function
+    - Should be self-contained
+
+* Higher order functions (functions which achieve following criteria)
+    - The function takes one or more functions as parameters (Combinator pattern)
+    - The function returns another function as result (Combinator pattern)
